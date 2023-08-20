@@ -8,9 +8,24 @@ public class Exerc8{
 
     //pega o nome do produto
     static String getNomeProduto(Scanner scanner){
+
         try {
             System.out.println("Digite o nome do produto: ");
-            String nomeProduto = scanner.next();
+            String nomeProduto = scanner.nextLine();
+
+            try {
+                double verifyName = Double.parseDouble(nomeProduto);
+                if(verifyName >=0 || verifyName <=0){
+                    System.out.println("Digite um nome válido!");
+                    return getNomeProduto(scanner);
+                }
+
+            }catch(Exception e){
+                if(!(e instanceof NumberFormatException)){
+                    throw e;
+                }
+            }
+
             return nomeProduto;
         }
         catch (Exception e) {
@@ -23,7 +38,14 @@ public class Exerc8{
     static Double getQuantidadeProduto(Scanner scanner){
         try {
             System.out.println("Digite a quantidade comprada: ");
-            return scanner.nextDouble();
+            double quantidade = scanner.nextDouble();
+            if(quantidade <= 0){
+                System.out.println("Digite um valor válido!");
+                return getQuantidadeProduto(scanner);
+            }
+            else{
+                return quantidade;
+            }
         }
         catch (Exception e) {
             System.out.println("Algo deu errado. Verifique a quantidade comprada e tente novamente.");
@@ -36,7 +58,14 @@ public class Exerc8{
     static Double getValorUnitario(Scanner scanner){
         try {
             System.out.println("Digite o valor unitario: ");
-            return scanner.nextDouble();
+            double unidades = scanner.nextDouble();
+            if(unidades <= 0){
+                System.out.println("Digite um valor válido!");
+                return getValorUnitario(scanner);
+            }
+            else{
+                return unidades;
+            }
         }
         catch (Exception e) {
             System.out.println("Algo deu errado. Verifique o valor unitário e tente novamente.");
@@ -49,10 +78,17 @@ public class Exerc8{
     static Double getPercentualDesconto(Scanner scanner){
         try {
             System.out.println("Digite o percentual de desconto: ");
-            return scanner.nextDouble();
+            double desconto = scanner.nextDouble();
+            if(desconto > 100.0){
+                System.out.println("Digite um valor válido!");
+                return getPercentualDesconto(scanner);
+            }
+            else{
+                return desconto;
+            }
         }
         catch (Exception e) {
-            System.out.println("Algo deu errado. Verifique o percentual de desconto e tente novamente.");
+            System.out.println("Algo deu errado. Verifique o percentual de desconto e tente novamente.\nLembrando, digite apenas numeros, o resto deixa que a gente completa!");
             scanner.next();
             return getPercentualDesconto(scanner);
         }
