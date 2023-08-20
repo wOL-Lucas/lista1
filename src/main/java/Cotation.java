@@ -1,5 +1,3 @@
-import java.util.Date;
-
 public class Cotation {
     private double high,low;
     private String create_date;
@@ -16,7 +14,7 @@ public class Cotation {
     public void setLow(double low){
         this.low = low;
     }
-    public String getDate(){
+    public String getCreate_date(){
         return this.create_date;
     }
     public void setCreate_date(String create_date){
