@@ -28,7 +28,7 @@ Este repositório contém as soluções em Java para uma lista de exercícios va
 
 12. **Distância até o Raio e Trovão:** Informe a distância em quilômetros de um raio para o observador. O observador deve informar o tempo (em segundos) transcorrido entre ver o raio e ouvir o trovão. Assuma que a velocidade do som seja 340 m/s.
 
-## Como Usar
+## Clone o repositório em sua maquina
 
 1. Clone este repositório para sua máquina local usando o comando:
 
