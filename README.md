@@ -32,5 +32,5 @@ Este repositório contém as soluções em Java para uma lista de exercícios va
 
 1. Clone este repositório para sua máquina local usando o comando:
 
-git clone https://github.com/seu-usuario/nome-do-repositorio.git
+git clone https://github.com/wOL-Lucas/lista1.git
 
